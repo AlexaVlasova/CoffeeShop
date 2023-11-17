@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CoffeeShop.Views.CreateItemPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Название" />
+            <Entry Text="{Binding Name}" />
+            <Label Text="Описание" />
+            <Entry Text="{Binding Description}" />
+            <Label Text="Количество" />
+            <Entry Text="{Binding Amount}" />
+            <Label Text="Цена" />
+            <Entry Text="{Binding Price}" />
+            <Label Text="Изображение" />
+            <Entry Text="{Binding ImageUrl}" />
+            <Label Text="Категория" />
+            <Picker SelectedItem ="{Binding Category}" x:Name="thePicker"/>
+            <StackLayout Orientation="Horizontal">
+                <Button Text="Сохранить" Clicked="SaveItem" />
+                <Button Text="Удалить" Clicked="DeleteItem" />
+                <Button Text="Отмена" Clicked="Cancel" />
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

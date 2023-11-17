@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CoffeeShop.Views.CoffeeItemPage">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="Accent">#96d1ff</Color>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="#d6c5ba">
+            <StackLayout>
+            <ScrollView>
+                <ScrollView HorizontalOptions="Fill" Orientation="Horizontal" HorizontalScrollBarVisibility="Never">
+                <StackLayout Margin="7,5,0,0" Orientation="Horizontal">
+                   <Button BackgroundColor="#fcf8f5" TextColor="#524a46" BorderColor="#dbd7d5" BorderWidth="1" CornerRadius="25" WidthRequest="130" HeightRequest="40" Text="Все" x:Name="All" Clicked="All_Clicked"/>
+                   <Button BackgroundColor="#fcf8f5" TextColor="#524a46" BorderColor="#dbd7d5" BorderWidth="1" CornerRadius="25" WidthRequest="130" HeightRequest="40" Text="Напитки" x:Name="Drinks" Clicked="Drinks_Clicked"/>
+                   <Button BackgroundColor="#fcf8f5" TextColor="#524a46" BorderColor="#dbd7d5" BorderWidth="1" CornerRadius="25" WidthRequest="130" HeightRequest="40" Text="Выпечка" x:Name="Bakery" Clicked="Bakery_Clicked"/>
+                   <Button BackgroundColor="#fcf8f5" TextColor="#524a46" BorderColor="#dbd7d5" BorderWidth="1" CornerRadius="25" WidthRequest="130" HeightRequest="40" Text="Зерна" x:Name="Beans" Clicked="Beans_Clicked"/>
+                   <Button BackgroundColor="#fcf8f5" TextColor="#524a46" BorderColor="#dbd7d5" BorderWidth="1" CornerRadius="25" WidthRequest="130" HeightRequest="40" Text="Дополнительно" x:Name="Additional" Clicked="Additional_Clicked"/>
+                   <Button BackgroundColor="#fcf8f5" TextColor="#524a46" BorderColor="#dbd7d5" BorderWidth="1" CornerRadius="25" WidthRequest="130" HeightRequest="40" Text="Сертификаты" x:Name="Certificate" Clicked="Certificate_Clicked"/>
+                 </StackLayout>
+                </ScrollView>
+            </ScrollView>
+            </StackLayout>
+            <ScrollView HorizontalOptions="FillAndExpand"  VerticalOptions="FillAndExpand">
+                <Frame>
+                    <StackLayout>
+                        <Button Text="Добавить" Clicked="CreateItem" />
+                        <CollectionView  x:Name="itemList" ItemsSource="{Binding}">
+                            <CollectionView.ItemTemplate>
+                                <DataTemplate>
+                                    <StackLayout>
+
+                                        <StackLayout>
+                                            <Frame BorderColor="#d9d7d7" HasShadow="True" BackgroundColor="#fcf8f5" Margin="0,3,0,3" CornerRadius="25" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                                                <StackLayout Orientation="Horizontal">
+                                                    <Grid >
+                                                        <Grid.ColumnDefinitions>
+                                                            <ColumnDefinition Width="100"/>
+                                                            <ColumnDefinition Width="130"/>
+                                                            <ColumnDefinition Width="50"/>
+                                                        </Grid.ColumnDefinitions>
+                                                        <Grid.RowDefinitions>
+                                                            <RowDefinition Height="30" />
+                                                            <RowDefinition Height="70" />
+                                                            <RowDefinition Height="35" />
+                                                        </Grid.RowDefinitions>
+                                                        <Label  Grid.Column="1" Grid.Row="0" Text="{Binding Name}" FontSize="Medium" HorizontalOptions="Start"/>
+                                                        <Image   Grid.Column="0" Grid.Row="0" Grid.RowSpan="2" Source="https://banner2.cleanpng.com/20180613/jj/kisspng-pumpkin-spice-latte-iphone-x-coffee-starbucks-5b20c0687b7bb3.3230335715288730645058.jpg"/>
+                                                        <Label   Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="3" Text="{Binding Description}" FontSize="Medium" HorizontalOptions="StartAndExpand"/>
+                                                        <Label  Grid.Column="2" Grid.Row="2" FontSize="30" Text="{Binding Price}" HorizontalOptions="Start"/>
+                                                        <!--<Label  Grid.Column="1" Grid.Row="" FontSize="30" Text="{Binding Category}" HorizontalOptions="Start"/>-->
+                                                    </Grid>
+                                                </StackLayout>
+                                            </Frame>
+                                        </StackLayout>
+                                    </StackLayout>
+                                </DataTemplate>
+                            </CollectionView.ItemTemplate>
+                        </CollectionView >
+                            <!--<Grid>
+                        <Frame x:Name="item" BorderColor="#e0dedc" HasShadow="True" BackgroundColor="#fffbf7" Margin="7,0,7,0" CornerRadius="10" WidthRequest="200" HeightRequest="70">
+                            <StackLayout>
+                            <Image Source="https://img.championat.com/s/735x490/news/big/k/l/kak-prigotovit-populjarnyj-dalgona-kofe_15876377302054158540.jpg" HeightRequest="100" WidthRequest="100" HorizontalOptions="Start" />
+                            <Label Text="Латте капучино пахнет как мужчина"></Label>
+                            </StackLayout>
+                        </Frame>
+                        </Grid>-->
+                    </StackLayout>
+                </Frame>
+            </ScrollView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
