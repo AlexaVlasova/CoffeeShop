@@ -14,10 +14,15 @@ namespace CoffeeShop.Data
         {
             database = new SQLiteConnection(databasePath);
             database.CreateTable<CoffeeItem>();
+            database.CreateTable<User>();
         }
         public IEnumerable<CoffeeItem> GetItems()
         {
             return database.Table<CoffeeItem>().ToList();
+        }
+        public IEnumerable<User> GetUsers()
+        {
+            return database.Table<User>().ToList();
         }
         public IEnumerable<CoffeeItem> GetItemsByCategory(string category)
         {
@@ -41,6 +46,18 @@ namespace CoffeeShop.Data
             else
             {
                 return database.Insert(item);
+            }
+        } 
+        public int SaveUser(User user)
+        {
+            if (user.Id != 0)
+            {
+                database.Update(user);
+                return user.Id;
+            }
+            else
+            {
+                return database.Insert(user);
             }
         }
     }

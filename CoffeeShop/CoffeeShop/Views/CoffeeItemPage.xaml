@@ -1,13 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    <ContentPage>
+        <ContentPage.Content>
+            
+        </ContentPage.Content>
+    </ContentPage>
+</TabbedPage>
+<!--<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="CoffeeShop.Views.CoffeeItemPage">
-
-    <ContentPage.Resources>
-        <ResourceDictionary>
-            <Color x:Key="Accent">#96d1ff</Color>
-        </ResourceDictionary>
-    </ContentPage.Resources>
+             x:Class="CoffeeShop.Views.CoffeeItemPage"
+             NavigationPage.HasNavigationBar="False">
     
     <ContentPage.Content>
         <StackLayout BackgroundColor="#d6c5ba">
@@ -52,7 +55,7 @@
                                                         <Image   Grid.Column="0" Grid.Row="0" Grid.RowSpan="2" Source="https://banner2.cleanpng.com/20180613/jj/kisspng-pumpkin-spice-latte-iphone-x-coffee-starbucks-5b20c0687b7bb3.3230335715288730645058.jpg"/>
                                                         <Label   Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="3" Text="{Binding Description}" FontSize="Medium" HorizontalOptions="StartAndExpand"/>
                                                         <Label  Grid.Column="2" Grid.Row="2" FontSize="30" Text="{Binding Price}" HorizontalOptions="Start"/>
-                                                        <!--<Label  Grid.Column="1" Grid.Row="" FontSize="30" Text="{Binding Category}" HorizontalOptions="Start"/>-->
+                                                        --><!--<Label  Grid.Column="1" Grid.Row="" FontSize="30" Text="{Binding Category}" HorizontalOptions="Start"/>--><!--
                                                     </Grid>
                                                 </StackLayout>
                                             </Frame>
@@ -61,17 +64,17 @@
                                 </DataTemplate>
                             </CollectionView.ItemTemplate>
                         </CollectionView >
-                            <!--<Grid>
+                            --><!--<Grid>
                         <Frame x:Name="item" BorderColor="#e0dedc" HasShadow="True" BackgroundColor="#fffbf7" Margin="7,0,7,0" CornerRadius="10" WidthRequest="200" HeightRequest="70">
                             <StackLayout>
                             <Image Source="https://img.championat.com/s/735x490/news/big/k/l/kak-prigotovit-populjarnyj-dalgona-kofe_15876377302054158540.jpg" HeightRequest="100" WidthRequest="100" HorizontalOptions="Start" />
                             <Label Text="Латте капучино пахнет как мужчина"></Label>
                             </StackLayout>
                         </Frame>
-                        </Grid>-->
+                        </Grid>--><!--
                     </StackLayout>
                 </Frame>
             </ScrollView>
         </StackLayout>
     </ContentPage.Content>
-</ContentPage>
+</ContentPage>-->

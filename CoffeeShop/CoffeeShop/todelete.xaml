@@ -1,0 +1,56 @@
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:local="clr-namespace:CoffeeShop.Views"
+       Title="CoffeeShop"
+        NavigationPage.HasNavigationBar="False">
+
+    <Grid RowDefinitions="*">
+
+        <Button Text="Авторизация" CornerRadius="0.5" FontSize="12"/>
+        <Button Text="Регистрация" CornerRadius="0.5" FontSize="12"/>
+    </Grid>
+    
+</ContentPage>
+    
+    
+<!--<?xml version="1.0" encoding="UTF-8"?>-->
+<!--<Shell xmlns="http://xamarin.com/schemas/2014/forms" 
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:local="clr-namespace:CoffeeShop.Views"
+       Title="CoffeeShop"
+       x:Class="CoffeeShop.AppShell" NavigationPage.HasNavigationBar="False">-->
+
+    <!--<Shell.Resources>
+        <ResourceDictionary>
+            <Style x:Key="BaseStyle" TargetType="Element">
+                <Setter Property="Shell.BackgroundColor" Value="#736157" />
+                <Setter Property="Shell.ForegroundColor" Value="White" />
+                <Setter Property="Shell.TitleColor" Value="White" />
+                <Setter Property="Shell.DisabledColor" Value="#B4FFFFFF" />
+                <Setter Property="Shell.UnselectedColor" Value="#95FFFFFF" />
+                <Setter Property="Shell.TabBarBackgroundColor" Value="#736157" />
+                <Setter Property="Shell.TabBarForegroundColor" Value="White"/>
+                <Setter Property="Shell.TabBarUnselectedColor" Value="#95FFFFFF"/>
+                <Setter Property="Shell.TabBarTitleColor" Value="White"/>
+            </Style>
+            <Style TargetType="TabBar" BasedOn="{StaticResource BaseStyle}" />
+            <Style TargetType="FlyoutItem" BasedOn="{StaticResource BaseStyle}" />
+        </ResourceDictionary>
+    </Shell.Resources>-->
+
+    <!--<TabBar>
+        <Tab Title="Меню" Icon="menu1.png">
+            <ShellContent  ContentTemplate="{DataTemplate local:CoffeeItemPage}" Route="CoffeeItemPage"/>
+        </Tab>
+        <Tab Title="Обо мне" Icon="user.png">
+            <ShellContent  ContentTemplate="{DataTemplate local:CreateItemPage}" Route="CreateItemPage"/>
+        </Tab>
+        <Tab Title="Корзина" Icon="basket.png">
+            <ShellContent  ContentTemplate="{DataTemplate local:CreateItemPage}" Route="CreateItemPage"/>
+        </Tab>
+    </TabBar>-->
+
+<!--</Shell>-->
+
+
+

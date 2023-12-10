@@ -1,0 +1,19 @@
+﻿<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:local="clr-namespace:CoffeeShop.Views"
+       x:Class="CoffeeShop.MainPage"
+       xmlns:vm="clr-namespace:CoffeeShop.ViewModels"
+       Title="CoffeeShop" NavigationPage.HasNavigationBar="False">
+
+    <ContentPage.BindingContext>
+        <vm:ViewModelBase x:Name="vm"></vm:ViewModelBase>
+    </ContentPage.BindingContext>
+    <Grid RowDefinitions="*,*">
+
+        <StackLayout Grid.Row="1">
+            <Button Command="{Binding login}" Text="Авторизация" CornerRadius="20" FontSize="15" Clicked="Authorization_Clicked"/>
+            <Button Command="{Binding sign}" Text="Регистрация" CornerRadius="20" FontSize="15"/>
+        </StackLayout>
+    </Grid>
+
+</ContentPage>

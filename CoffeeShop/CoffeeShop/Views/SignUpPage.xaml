@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CoffeeShop.Views.SignUpPage" 
+             xmlns:vm="clr-namespace:CoffeeShop.Models"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             NavigationPage.HasNavigationBar="False">
+    
+    <ContentPage.BindingContext>
+        <vm:User x:Name="vm"></vm:User>
+    </ContentPage.BindingContext>
+
+    <StackLayout>
+    <Grid RowDefinitions="*,*">
+        <StackLayout HorizontalOptions="Center">
+            <Label Text="Регистрация" TextColor="Black" Margin="0,10,0,0" HorizontalTextAlignment="Center" FontSize="Large"></Label>
+            <Frame CornerRadius="20" BackgroundColor="#e9edf5" WidthRequest="350" HeightRequest="25" MinimumHeightRequest="25" Margin="5,15,5,0">
+                <Entry Placeholder="Введите логин" Text = "{Binding Login}" HorizontalTextAlignment="Start" Margin="0,-30,0,-30"></Entry>
+            </Frame>
+            <Frame CornerRadius="20" BackgroundColor="#e9edf5" WidthRequest="350" HeightRequest="25" MinimumHeightRequest="25" Margin="5,15,5,0">
+                <Entry Placeholder="Введите имя" Text = "{Binding Name}" HorizontalTextAlignment="Start" Margin="0,-30,0,-30"></Entry>
+            </Frame>
+            <Frame CornerRadius="20" BackgroundColor="#e9edf5" WidthRequest="350" HeightRequest="25" MinimumHeightRequest="25" Margin="5,15,5,0">
+                <Entry Placeholder="Введите почту" Text = "{Binding Email}" HorizontalTextAlignment="Start" Margin="0,-30,0,-30"></Entry>
+            </Frame>
+
+            <Frame CornerRadius="20" BackgroundColor="#e9edf5" WidthRequest="350" HeightRequest="25" MinimumHeightRequest="25" Margin="5,15,5,0">
+                <Entry Placeholder="Введите пароль" Text = "{Binding Password}" HorizontalTextAlignment="Start" Margin="0,-30,0,-30"></Entry>
+            </Frame>
+
+
+            <!--<Frame CornerRadius="20" BackgroundColor="#e9edf5" WidthRequest="350" HeightRequest="25" MinimumHeightRequest="25" Margin="5,15,5,0">
+                <DatePicker Format="dd.MM.yyyy" Date="{Binding Birthday}" Margin="0,-30,0,-30" />
+            </Frame>-->
+            <!--<Frame CornerRadius="20" BackgroundColor="#e9edf5" WidthRequest="350" HeightRequest="25" MinimumHeightRequest="25" Margin="5,15,5,0">
+                <Entry Keyboard="Numeric" Placeholder="Введите номер телефона" Text = "{Binding Phone}" HorizontalTextAlignment="Start" Margin="0,-30,0,-30">
+                    <Entry.Behaviors>
+                        <xct:MaskedBehavior 
+                Mask="+0(000) 000-00-00" 
+                UnMaskedCharacter="0" 
+                />
+                    </Entry.Behaviors>
+                </Entry>
+            </Frame>-->
+
+        </StackLayout>
+
+    </Grid>
+        <Button Clicked="SignUp_Clicked" Text="Зарегистрироваться" CornerRadius="20" HeightRequest="60" FontSize="16" Margin="0,20,0,20"/>
+
+    </StackLayout>
+</ContentPage>
